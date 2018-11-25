@@ -5,7 +5,7 @@ categories:
 excerpt: |
   Distance/Reconstrunction-based Novelty Detections
 feature_text: |
-  Distance/Reconstrunction-based Novelty Detections
+  Distance/Reconstrunction-based Novelty Detections <br></br>
   이 글은 고려대학교 강필성 교수님의 Business Analytics 강의를 참조하였습니다.
 feature_image: "https://picsum.photos/2560/600?image=733"
 image: "https://picsum.photos/2560/600?image=733"
@@ -16,19 +16,21 @@ use_math: true
 
 
 
+<br></br><br></br><br></br>
 <h2> k-Nearest Neighbor-based Novelty Detection </h2>
 
-각각의 데이터 포인트마다, 인접한 k개의 데이터 포인트와의 거리를 계량함으로써 novelty score을 계산하고, 이를 근거로 outlier를 걸러내는 것을 골조로 하는 방식입니다. 이 때, 거리를 계량하는 방식에 따라
+각각의 데이터 포인트마다, 자신을 제외한 인접한 k개의 데이터 포인트와의 거리를 계량함으로써 novelty score을 계산하고, 이를 근거로 outlier를 걸러내는 것을 골조로 하는 방식입니다. 이 때, 거리를 계량하는 방식에 따라
 * max 거리
 {% include figure.html image="/images/1_max.png" width="300"%}
 * average 거리
 {% include figure.html image="/images/2_average.png" width="300"%}
 * mean 거리
 {% include figure.html image="/images/3_mean.png" width="300"%}
-등으로 세분화 될 수 있습니다.
+등으로 세분화 할 수 있습니다.
 
 
 
+<br></br>
 <h4> Average 거리를 이용한 코드예시 </h4>
 
 ```python
@@ -63,6 +65,7 @@ print(outliers)
 
 
 
+<br></br>
 <h4> 코드 설명 </h4>
 
 1. def k_neighbor_novelty_score(from_point, to_points):
@@ -75,17 +78,18 @@ from_point-to_points간의 평균 거리를 바탕으로, from_point의 to_point
 
 
 
+<br></br><br></br><br></br>
 <h2> Clustering-based Novelty Detection </h2>
 
-각각의 데이터 포인트마다, 가장 가까운 centroid까지의 거리를 계량함으로써 novelty score을 계산하고, 이를 근거로 outlier를 걸러내는 것을 골조로 하는 방식입니다.
-이 때, centroid란, k-means clustering, 즉, EM 알고리즘의 수행 결과로써 나온 centrods를 생각하면 됩니다.
-또한, 거리를 계량하는 방식에 따라
+각각의 데이터 포인트마다, 가장 가까운 centroid까지의 거리를 계량함으로써 novelty score을 계산하고, 이를 근거로 outlier를 걸러내는 것을 골조로 하는 방식입니다(centroid란, k-means clustering, 즉, EM 알고리즘의 수행 결과로써 나온 centrods를 의미합니다).
+이 떄, 거리를 계량하는 방식에 따라
 * 절대 거리
 * 상대 거리
 로 세분화 될 수 있습니다.
 
 
 
+<br></br>
 <h4> 절대 거리를 이용한 코드예시 </h4>
 
 ```python
@@ -120,6 +124,7 @@ print(outliers)
 
 
 
+<br></br>
 <h4> 코드 설명 </h4>
 
 1. def closest_centroid_novelty_score(from_point, to_centroids):
