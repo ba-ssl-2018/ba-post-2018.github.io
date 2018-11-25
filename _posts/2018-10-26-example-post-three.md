@@ -56,7 +56,7 @@ for outer_idx in np.arange(num_data):
 ## 3 ############################################################################################
 print(novelty_scores)
 # Read data and set some threshold
-threshold = 270
+threshold = 50
 outliers = [idx for idx, element in enumerate(novelty_scores) if element > threshold]
 print(outliers)
 ```
