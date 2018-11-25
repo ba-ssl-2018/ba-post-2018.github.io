@@ -30,7 +30,6 @@ use_math: true
 
 
 
-<br><br/>
 <h4> Average 거리를 이용한 코드예시 </h4>
 
 ```python
@@ -65,7 +64,6 @@ print(outliers)
 
 
 
-<br><br/>
 <h4> 코드 설명 </h4>
 
 1. def k_neighbor_novelty_score(from_point, to_points):
@@ -89,7 +87,6 @@ from_point-to_points간의 평균 거리를 바탕으로, from_point의 to_point
 
 
 
-<br><br/>
 <h4> 절대 거리를 이용한 코드예시 </h4>
 
 ```python
@@ -124,7 +121,6 @@ print(outliers)
 
 
 
-<br><br/>
 <h4> 코드 설명 </h4>
 
 1. def closest_centroid_novelty_score(from_point, to_centroids):
