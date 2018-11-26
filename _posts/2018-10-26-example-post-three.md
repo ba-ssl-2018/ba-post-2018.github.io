@@ -24,11 +24,11 @@ use_math: true
 이를 근거로 outlier를 걸러내는 것을 골조로 하는 방식입니다. <br/>
 이 때, 거리를 계량하는 방식에 따라
 * max 거리
-{% include figure.html image="/images/1_max.png" width="600"% height="300"%}
+{% include figure.html image="/images/1_max.png" width="600" height="300"}
 * average 거리
-{% include figure.html image="/images/2_average.png" width="600"% height="300"%}
+{% include figure.html image="/images/2_average.png" width="600" height="300"}
 * mean 거리
-{% include figure.html image="/images/3_mean.png" width="600"% height="300"%}
+{% include figure.html image="/images/3_mean.png" width="600" height="300"}
 등으로 세분화 할 수 있습니다.
 
 
@@ -148,9 +148,9 @@ from_point-to_centroids L2-norm을 바탕으로, from_point에서 각각의 cent
 이 때,
 * PCA를 하기 전의 데이터 공간을 X 공간: span by original data representing basis of x_1 and x_2 (holding original data points X)
 * PCA에 의하여 projected된 공간을 Z 공간: span by princiapl compoenent basis of z_1 and z_2 (reserving maximum projected variance)
-{% include figure.html image="/images/4_to_z.png" width="600"% height="300"%}
+{% include figure.html image="/images/4_to_z.png" width="600" height="300"}
 * PCA이후 reconstructed된 데이터 공간을 x공간: span by original data representing basis of x_1 and x_2 (holding reconstructed data points X')
-{% include figure.html image="/images/4_back_to_x.png" width="600"% height="300"%}
+{% include figure.html image="/images/4_back_to_x.png" width="600" height="300"}
 이라 칭하겠습니다.
 
 
