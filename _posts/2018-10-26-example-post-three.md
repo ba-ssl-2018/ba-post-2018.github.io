@@ -85,7 +85,7 @@ from_point-to_points간의 평균 거리를 바탕으로, from_point의 to_point
 각각의 데이터 포인트마다, 가장 가까운 centroid까지의 거리를 계량함으로써 novelty score을 계산하고, 이를 근거로 outlier를 걸러내는 것을 골조로 하는 방식입니다(centroid란, k-means clustering, 즉, EM 알고리즘의 수행 결과로써 나온 centrods를 의미합니다). <br/>
 이 때, 거리를 계량하는 방식에 따라
 * 절대 거리
-* 상대 거리
+* 상대 거리 <br/>
 로 세분화 될 수 있습니다.
 
 
@@ -141,12 +141,12 @@ from_point-to_centroids L2-norm을 바탕으로, from_point에서 각각의 cent
 <br><br><br><br/><br/><br/>
 <h2> Principal Component Analysis-based Novelty Detection </h2>
 
-각각의 데이터 포인트마다, PCA를 하기 전의 데이터 포인트 X와, PCA를 수행한 후 다시 reconstruct한 데이터 포인트 X' 간의 절대 거리를 계량함으로써 novelty score을 계산하고, 이를 근거로 outlier를 걸러내는 것을 골조로 하는 방식입니다. <br/>
+각각의 데이터 포인트마다, PCA를 하기 전의 데이터 포인트 X와, PCA를 수행한 후 다시 reconstruct한 데이터 포인트 X\' 간의 절대 거리를 계량함으로써 novelty score을 계산하고, 이를 근거로 outlier를 걸러내는 것을 골조로 하는 방식입니다. <br/>
 이 때,
 * PCA를 하기 전의 데이터 공간을 X 공간: span by original data representing basis of x_1 and x_2 (holding original data points X)
 * PCA에 의하여 projected된 공간을 Z 공간: span by princiapl compoenent basis of z_1 and z_2 (reserving maximum projected variance)
 <img src="/images/4_to_z.png" width="1800" height="600" />
-* PCA이후 reconstructed된 데이터 공간을 x공간: span by original data representing basis of x_1 and x_2 (holding reconstructed data points X')
+* PCA이후 reconstructed된 데이터 공간을 X공간: span by original data representing basis of x_1 and x_2 (holding reconstructed data points X\')
 <img src="/images/4_back_to_x.png" width="1800" height="600" />
 이라 칭하겠습니다.
 
