@@ -185,8 +185,7 @@ print(outliers)
 
 1. def reconstruction_loss_novelty_score(from_points, to_reconstructed_points): <br/>
 함수는 PCA를 하기 전 모든 데이터 포인트와(from_points), PCA를 수행한 후 다시 reconstruct한 모든 데이터 포인트(to_reconstructed_points)를 인풋으로 받습니다. <br/>
-from_points-to_reconstructed_points L2-norm을 바탕으로, <br/>
-from_points의 각 점에서 to_reconstructed_points의 각 점까지의 절대 거리를 구하여, novelty score로써 반환합니다.
+from_points-to_reconstructed_points L2-norm을 바탕으로, from_points의 각 점에서 to_reconstructed_points의 각 점까지의 절대 거리를 구하여, novelty score로써 반환합니다.
 2. 100개의 숫자데이터(각각이 pixels를 담고 있는 record)를 로드하고, PCA와 reconstruction을 수행합니다. <br/>
 이어 데이터 포인트 전체와 reconstructed된 데이터 포인트 전체를 상기 함수에 feeding함으로써, 전체 데이터 포인트 각각의 요소에 corresponding하는 reconstructed 데이터 포인트에 대한 novelty score을 각각 계산합니다.
 3. novelty score을 뽑아보고 임의의 임계값을 정하여 outliers를 골라냅니다.
