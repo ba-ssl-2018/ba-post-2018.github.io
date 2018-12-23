@@ -50,7 +50,7 @@ b) 기존 labeled data로 훈련된 모델보다 훨씬 일반적인 모델 설�
 self-training이란 앞서 소개한 semi-supervised learning의 한 갈래입니다.
 
 self-training은 대략적으로 다음과 같은 방식으로 진행됩니다.
-<img src="/images/self_t.png" width="1800" height="600" />
+<img src="/images/self_t.png" width="1800" height="1200" />
 
 : labeled data로 훈련한 모델로 unlabeled data의 label을 예측하고, 예측된 label을 정답으로 가정하여 훈련 데이터에 추가한 뒤, 다시 모델을 훈련시켜 나가는 것입니다.
 
@@ -71,7 +71,7 @@ c) 예측 결과값에 따라 가중치를 부여하여 추가
 Propagating 1 Nearest Neighbor 방식은 비슷한 label을 갖는 데이터는 서로 거리가 가까이 위치한다는 가정에서 시작합니다.
 
 - 해당 알고리즘은 대략적으로 다음과 같은 방식으로 진행됩니다.
-<img src="/images/1nn.png" width="1800" height="600" />
+<img src="/images/1nn.png" width="1800" height="500" />
 
 : unlabeled data 하나를 다른 labeled data 사이의 거리를 비교하여, 가장 가까운 거리에 위치한 data의 label을 부여하는 방법입니다.
 
@@ -134,7 +134,10 @@ model.fit(x_labeled, y_labeled, epochs=3)
 loss, acc = model.evaluate(x_test, y_test)
 print("Current Accuracy: ", acc)
 ```
-<img src="/images/base_acc.png" width="1800" height="200" />
+다음은 50000개의 sample로만 훈련한 결과입니다. 
+self-training을 통해 test error가 어떻게 변화하는지 살펴보고자 합니다.
+<img src="/images/self_t1.png" width="1200" height="100" />
+
 - 모델 기반 방식에는 세 가지 변이가 있었습니다.
 
 a) 모든 unlabeled data와 예측한 label을 훈련 데이터에 추가
@@ -164,7 +167,7 @@ if method == "all":
 
     print("Accuracy changed to : ", t_acc)
 ```
-<img src="/images/acc1.png" width="1800" height="200" />
+<img src="/images/self_t2.png" width="1200" height="100" />
 <br>
 b) 예측 결과값이 높게 나온 일부 unlabeled data의 라벨만 추가
 
@@ -206,7 +209,7 @@ elif method == "top":
 
     print("Accuracy changed to : ", t_acc)
 ```
-<img src="/images/acc2.png" width="1800" height="200" />
+<img src="/images/self_t3.png" width="1200" height="100" />
 <br>
 c) 예측 결과값에 따라 가중치를 부여하여 추가
 
@@ -238,10 +241,12 @@ elif method == "weight":
 
     print("Accuracy changed to : ", t_acc)
 ```
-<img src="/images/acc1.png" width="1800" height="200" />
+<img src="/images/self_t4.png" width="1200" height="100" />
+크지 않지만 확실하게 test accuracy가 증가하는 모습을 확인할 수 있었습니다.
+
 <br>
 <br>
-- 이번에는 I-NN 기법을 확인해보겠습니다.
+* 이번에는 I-NN 기법을 확인해보겠습니다.
 : 두 개의 분포를 각각 하나의 instance를 기반으로 label을 부여하는 과정을 코드로 작성했습니다.
 ```python
 import math
@@ -272,7 +277,7 @@ plt.plot(15, x1[15], marker='o', color='r')
 plt.plot(5, x2[5], marker='o', color='b')
 plt.show()
 ```
-<img src="/images/1nn_plot3.png" width="1800" height="200" />
+<img src="/images/1nn_plot3.png" width="1800" height="600" />
 <br>
 - 아래는 for-loop를 반복하며 라벨을 부여하는 과정을 코드로 작성한 것입니다.
 ```python
