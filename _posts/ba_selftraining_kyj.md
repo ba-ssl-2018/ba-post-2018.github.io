@@ -1,7 +1,7 @@
 ---
 title: Self-Learning
 categories:
-- ML
+- General
 excerpt: |
   # Self-Learning
   <br><br/>
