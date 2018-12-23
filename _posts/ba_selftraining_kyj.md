@@ -248,6 +248,7 @@ elif method == "weight":
 <br>
 * 이번에는 I-NN 기법을 확인해보겠습니다.
 : 두 개의 분포를 각각 하나의 instance를 기반으로 label을 부여하는 과정을 코드로 작성했습니다.
+
 ```python
 import math
 import numpy as np
@@ -277,9 +278,11 @@ plt.plot(15, x1[15], marker='o', color='r')
 plt.plot(5, x2[5], marker='o', color='b')
 plt.show()
 ```
+
 <img src="/images/1nn_plot3.png" width="1800" height="600" />
 <br>
 - 아래는 for-loop를 반복하며 라벨을 부여하는 과정을 코드로 작성한 것입니다.
+
 ```python
 # for each single unlabeled data
 for single_u in unlabeled_data:
@@ -319,7 +322,8 @@ plt.scatter(pseudo_x1[:, 0], pseudo_x1[:,1], marker="x", color="r")
 plt.scatter(pseudo_x2[:, 0], pseudo_x2[:,1], marker="o", color="b")
 plt.show()
 ```
-<img src="/images/1nn_plot4.png" width="1800" height="200" />
+
+<img src="/images/1nn_plot4.png" width="1800" height="600" />
 <br>
 - 위에 작성한 코드는 다음 github repo()에서 확인할 수 있습니다.
 
