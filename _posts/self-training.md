@@ -344,6 +344,7 @@ plt.show()
 
 3) NLP (Natural Language Processing)와 같은 실제 사례에서도 활용된다.
 
+<br>
 * 단점
 
 1) Outlier와 같은 데이터 상의 문제에 취약하다.
