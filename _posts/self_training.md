@@ -1,7 +1,7 @@
 ---
 title: Self-Learning
 categories:
-- Machine Learning
+- General
 excerpt: |
   # Self-Learning
   <br><br/>
