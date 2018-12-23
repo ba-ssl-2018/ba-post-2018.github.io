@@ -15,7 +15,7 @@ use_math: true
 <br><br>
 <h4>1. Semi-supervised Learning</h4>
 
-기존 기계학습은 각각의 데이터 x에 대한 Target Label y가 제공되는지에 대한 여부로 Supervised Learning과 Unsupervised Learning으로 나눌 수 있습니다.
+ 기존 기계학습은 각각의 데이터 x에 대한 Target Label y가 제공되는지에 대한 여부로 Supervised Learning과 Unsupervised Learning으로 나눌 수 있습니다.
 Supervised Learning에 있어서 Label은 현재 구축하려는 모델 혹은 알고리즘이 지향할 목표이자 정답 역할을 하기에 필수 불가결합니다.
 <br>
 하지만 Label이 있는 데이터를 구하는 것은 언제나 쉬운 일이 아닙니다.
@@ -325,7 +325,7 @@ plt.show()
 
 <img src="/images/1nn_plot4.png" width="1800" height="600" />
 <br>
-- 위에 작성한 코드는 다음 github repo()에서 확인할 수 있습니다.
+- 위에 작성한 코드는 다음 github repo(https://github.com/KYJun/self_training)에서 확인할 수 있습니다.
 
 
 <br><br>
