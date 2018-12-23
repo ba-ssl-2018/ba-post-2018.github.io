@@ -3,10 +3,11 @@ title: Self-Learning
 categories:
 - General
 excerpt: |
+  self-training
+feature_text: |
   # Self-Learning
   <br><br/>
   이 글은 고려대학교 강필성 교수님의 Business Analytics 강의를 참조하였습니다.
-feature_text: |
 feature_image: "https://picsum.photos/2560/600?image=733"
 image: "https://picsum.photos/2560/600?image=733"
 use_math: true
@@ -105,7 +106,7 @@ y_test = np.eye(10)[y_test]
 
 # shuffle train data
 np.random.seed(0)
-shuffled_indices = np.random.permutation(np.arange(6000))
+shuffled_indices = np.random.permutation(np.arange(60000))
 x_train_shuffled = x_train[shuffled_indices, :, :]
 y_train_shuffled = y_train[shuffled_indices, :]
 
